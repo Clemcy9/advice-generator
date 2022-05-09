@@ -13,7 +13,22 @@ function Home() {
     toggle
   );
 
-  if (loading) return <h1> Loading</h1>;
+  if (loading) {
+    return (
+      <div className="loader container">
+        <div className="circle">
+          <div className="dot" id="d0"></div>
+          <div className="dot" id="d1"></div>
+          <div className="dot" id="d2"></div>
+          <div className="dot" id="d3"></div>
+          <div className="dot" id="d4"></div>
+          <div className="dot" id="d5"></div>
+          <div className="dot" id="d6"></div>
+          <div className="dot" id="d7"></div>
+        </div>
+      </div>
+    );
+  }
   if (error) <h1>errro occured at:{error}</h1>;
   return (
     <div className="homeParent">
